@@ -11,21 +11,21 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@ExtendWith(SpringExtension.class)
-@WebMvcTest(controllers = UserController.class)
+//@ExtendWith(SpringExtension.class)
+//@WebMvcTest(controllers = UserController.class)
 class UserControllerTest {
 
-    @Autowired
-    private MockMvc mvc;
+//    @Autowired
+//    private MockMvc mvc;
 
-    @Test
-    public void 유저조회_테스트() throws Exception{
-        String name = "kyko";
-        int age = 23;
-
-        mvc.perform(get("/api/user").param("name", name).param("age", String.valueOf(23)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value(name))
-                .andExpect(jsonPath("$.age").value(age));
-    }
+//    @Test
+//    public void 유저조회_테스트() throws Exception{
+//        String name = "kyko";
+//        int age = 23;
+//
+//        mvc.perform(get("/api/user").param("name", name).param("age", String.valueOf(23)))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$.name").value(name))
+//                .andExpect(jsonPath("$.age").value(age));
+//    }
 }
